@@ -21,6 +21,7 @@ jobs:
         run: |
           python3 -m pip install --no-cache-dir -U pip setuptools
           python3 -m pip install --no-cache-dir cython~=0.29
+          python3 -m pip install --no-cache-dir --no-build-isolation -e .[dev,test,geopandas]
 
       - name: Build a source tarball
         run: |
