@@ -15,14 +15,10 @@ jobs:
 
       - name: Setup Conda
         uses: conda-incubator/setup-miniconda@v2
-        with:
-          miniforge-version: 0.20
-          miniforge-variant: Mambaforge
-          use-mamba: true
 
       - name: install dependencies
         run: |
-          mamba install python cython setuptools gdal
+          mamba install python cython setuptools gdal numpy -c conda-forge
 
       - name: Build a source tarball
         run: |
